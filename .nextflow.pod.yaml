@@ -1,0 +1,28 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: cheesy-cuvier
+  namespace: default
+  labels: {app: nextflow, runName: cheesy-cuvier}
+spec:
+  restartPolicy: Never
+  containers:
+  - name: cheesy-cuvier
+    image: nextflow/nextflow:23.09.3-edge
+    command: [/bin/bash, -c, source /etc/nextflow/init.sh; nextflow run Nine-s/eager_generated
+        -name cheesy-cuvier -resume last -r master]
+    env:
+    - {name: NXF_WORK, value: /workspace/ninon/work}
+    - {name: NXF_ASSETS, value: /workspace/projects}
+    - {name: NXF_EXECUTOR, value: k8s}
+    - {name: NXF_ANSI_LOG, value: 'false'}
+    volumeMounts:
+    - {name: vol-1, mountPath: /workspace}
+    - {name: vol-2, mountPath: /etc/nextflow}
+  serviceAccountName: default
+  securityContext: {runAsUser: 0}
+  volumes:
+  - name: vol-1
+    persistentVolumeClaim: {claimName: nextflow-ninon}
+  - name: vol-2
+    configMap: {name: nf-config-54bf7d75}

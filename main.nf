@@ -1,14 +1,14 @@
 nextflow.enable.dsl = 2
 
 
-include { FASTQC as FASTQC_PRE_PREPROCESSING; FASTQC as FASTQC_POST_PREPROCESSING } from './modules_eager/fastqc.nf'
-include { FASTP  } from './modules_eager/fastp_aDNA.nf'
-include { ADAPTER_REMOVAL  } from './modules_eager/adapter_removal.nf'
-include { BOWTIE2_INDEX  } from './modules_eager/bowtie2_index.nf'
-include { BOWTIE2  } from './modules_eager/bowtie2.nf'
-include { SAMTOOLS_FILTER  } from './modules_eager/samtools_filter.nf'
-include { BBDUK  } from './modules_eager/bbduk.nf'
-include { KRAKEN ; KRAKEN_PARSE ; KRAKEN_MERGE  } from './modules_eager/kraken.nf'
+include { FASTQC as FASTQC_PRE_PREPROCESSING; FASTQC as FASTQC_POST_PREPROCESSING } from '../../../ninon/description_prototype/modules_eager/fastqc.nf'
+include { FASTP  } from '../../../ninon/description_prototype/modules_eager/fastp_aDNA.nf'
+include { ADAPTER_REMOVAL  } from '../../../ninon/description_prototype/modules_eager/adapter_removal.nf'
+include { BOWTIE2_INDEX  } from '../../../ninon/description_prototype/modules_eager/bowtie2_index.nf'
+include { BOWTIE2  } from '../../../ninon/description_prototype/modules_eager/bowtie2.nf'
+include { SAMTOOLS_FILTER  } from '../../../ninon/description_prototype/modules_eager/samtools_filter.nf'
+include { BBDUK  } from '../../../ninon/description_prototype/modules_eager/bbduk.nf'
+include { KRAKEN ; KRAKEN_PARSE ; KRAKEN_MERGE  } from '../../../ninon/description_prototype/modules_eager/kraken.nf'
 
 workflow{
         read_pairs_ch = Channel
