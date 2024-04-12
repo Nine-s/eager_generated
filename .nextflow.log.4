@@ -1,127 +1,20 @@
-Apr-11 18:18:55.931 [main] DEBUG nextflow.cli.Launcher - $> nextflow kuberun Nine-s/eager_generated -r master -c nextflow.config -resume
-Apr-11 18:18:56.157 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/home/ninon/.nextflow/plugins; core-plugins: nf-amazon@2.1.4,nf-azure@1.3.2,nf-cloudcache@0.3.0,nf-codecommit@0.1.5,nf-console@1.0.6,nf-ga4gh@1.1.0,nf-google@1.8.3,nf-tower@1.6.3,nf-wave@0.14.0
-Apr-11 18:18:56.174 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
-Apr-11 18:18:56.176 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
-Apr-11 18:18:56.181 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
-Apr-11 18:18:56.196 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
-Apr-11 18:18:56.213 [main] DEBUG nextflow.scm.ProviderConfig - Using SCM config path: /home/ninon/.nextflow/scm
-Apr-11 18:18:56.250 [main] DEBUG nextflow.scm.RepositoryFactory - Found Git repository result: [RepositoryFactory]
-Apr-11 18:18:56.262 [main] DEBUG nextflow.scm.RepositoryProvider - Request [credentials -:-] -> https://api.github.com/repos/Nine-s/eager_generated/contents/nextflow.config
-Apr-11 18:18:56.663 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /home/ninon/description_prototype/v1/eager_generated/nextflow.config
-Apr-11 18:18:56.668 [main] DEBUG nextflow.config.ConfigBuilder - User config file: https://github.com/Nine-s/eager_generated/nextflow.config
-Apr-11 18:18:56.669 [main] DEBUG nextflow.config.ConfigBuilder - User config file: /home/ninon/description_prototype/v1/eager_generated/nextflow.config
-Apr-11 18:18:56.670 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /home/ninon/description_prototype/v1/eager_generated/nextflow.config
-Apr-11 18:18:56.671 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: https://github.com/Nine-s/eager_generated/nextflow.config
-Apr-11 18:18:56.672 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /home/ninon/description_prototype/v1/eager_generated/nextflow.config
-Apr-11 18:18:56.696 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
-Apr-11 18:18:57.609 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
-Apr-11 18:18:57.801 [main] DEBUG nextflow.config.ConfigBuilder - In the following config snippet the attribute `params.False` is empty:
-  strand='unstranded'
-  outdir='/workspace/ninon/data/results/'
-  csv_input='./input.csv'
-  annotation_gtf='/workspace/ninon/data/Mus_musculus.GRCm39.111.gtf'
-  genome='/workspace/ninon/data/Mus_musculus.GRCm39.dna.toplevel.fa'
-  transcripts_fasta='/workspace/ninon/data/Drosophila_melanogaster.BDGP6.32.cdna.all.fa'
-  basedir='/workspace/projects/Nine-s/eager'
-  krakendb='/workspace/projects/Nine-s/eager/krakendb'
-  db_to_dl='archaea'
-  metagenomic_min_support_reads=1
-  complexity_filter_poly_g_min=10
-  clip_adapters_list='/workspace/ninon/data/adapter-list.txt'
-  clip_forward_adaptor='AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC'
-  clip_reverse_adaptor='AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTA'
-  qualitymax=41
-  clip_readlength=30
-  clip_min_read_quality=20
-  min_adap_overlap=1
-  bt2_alignmode='local'
-  bt2_sensitivity='sensitive'
-  bt2n=0
-  bt2l=0
-  bt2_trim5=0
-  bt2_trim3=0
-  bt2_maxins=500
-  metagenomic_complexity_entropy=0.3
-  bam_unmapped_type='discard'
-  bam_filter_minreadlength=0
-  bam_mapping_quality_threshold=0
-  threads=16.0
-
-Apr-11 18:18:57.806 [main] ERROR nextflow.cli.Launcher - Unknown config attribute `params.False` -- check config file: https://github.com/Nine-s/eager_generated/nextflow.config
-nextflow.exception.ConfigParseException: Unknown config attribute `params.False` -- check config file: https://github.com/Nine-s/eager_generated/nextflow.config
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:72)
-	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:105)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:59)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
-	at nextflow.config.ConfigBuilder.validate(ConfigBuilder.groovy:460)
-	at jdk.internal.reflect.GeneratedMethodAccessor9.invoke(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:48)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:189)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:57)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:51)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:212)
-	at nextflow.config.ConfigBuilder.validate(ConfigBuilder.groovy:467)
-	at nextflow.config.ConfigBuilder.validate(ConfigBuilder.groovy:447)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:48)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:189)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:57)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:51)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:194)
-	at nextflow.config.ConfigBuilder.merge0(ConfigBuilder.groovy:421)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:48)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:189)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:57)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:51)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)
-	at nextflow.config.ConfigBuilder.buildConfig0(ConfigBuilder.groovy:370)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:48)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:189)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:57)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:51)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:194)
-	at nextflow.config.ConfigBuilder.buildGivenFiles(ConfigBuilder.groovy:315)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:48)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:189)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:57)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:51)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
-	at nextflow.config.ConfigBuilder.buildConfigObject(ConfigBuilder.groovy:805)
-	at nextflow.config.ConfigBuilder$buildConfigObject$5.call(Unknown Source)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:130)
-	at nextflow.k8s.K8sDriverLauncher.loadConfig(K8sDriverLauncher.groovy:277)
-	at nextflow.k8s.K8sDriverLauncher.makeConfig(K8sDriverLauncher.groovy:303)
-	at nextflow.k8s.K8sDriverLauncher.run(K8sDriverLauncher.groovy:146)
-	at nextflow.cli.CmdKubeRun.run(CmdKubeRun.groovy:97)
-	at nextflow.cli.Launcher.run(Launcher.groovy:495)
-	at nextflow.cli.Launcher.main(Launcher.groovy:666)
+Apr-12 13:28:06.988 [main] DEBUG nextflow.cli.Launcher - $> nextflow kuberun Nine-s/eager_generated -r master -c nextflow_1.config -resume
+Apr-12 13:28:07.191 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/home/ninon/.nextflow/plugins; core-plugins: nf-amazon@2.1.4,nf-azure@1.3.2,nf-cloudcache@0.3.0,nf-codecommit@0.1.5,nf-console@1.0.6,nf-ga4gh@1.1.0,nf-google@1.8.3,nf-tower@1.6.3,nf-wave@0.14.0
+Apr-12 13:28:07.204 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Apr-12 13:28:07.207 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Apr-12 13:28:07.212 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
+Apr-12 13:28:07.225 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Apr-12 13:28:07.241 [main] DEBUG nextflow.scm.ProviderConfig - Using SCM config path: /home/ninon/.nextflow/scm
+Apr-12 13:28:07.273 [main] DEBUG nextflow.scm.RepositoryFactory - Found Git repository result: [RepositoryFactory]
+Apr-12 13:28:07.282 [main] DEBUG nextflow.scm.RepositoryProvider - Request [credentials -:-] -> https://api.github.com/repos/Nine-s/eager_generated/contents/nextflow.config
+Apr-12 13:28:08.285 [main] DEBUG nextflow.scm.RepositoryProvider - Response status: 404 -- {"message":"Not Found","documentation_url":"https://docs.github.com/rest/repos/contents#get-repository-content"}
+Apr-12 13:28:08.294 [main] DEBUG nextflow.scm.RepositoryProvider - Request [credentials -:-] -> https://api.github.com/repos/Nine-s/eager_generated
+Apr-12 13:28:08.578 [main] DEBUG nextflow.scm.AssetManager - Cannot retrieve remote config file -- likely it does not exist
+Apr-12 13:28:08.594 [main] DEBUG nextflow.config.ConfigBuilder - User config file: /home/ninon/description_prototype/v1/eager_generated/nextflow_1.config
+Apr-12 13:28:08.596 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /home/ninon/description_prototype/v1/eager_generated/nextflow_1.config
+Apr-12 13:28:08.667 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
+Apr-12 13:28:09.784 [main] DEBUG nextflow.k8s.K8sConfig - Kubernetes workDir=/workspace/ninon/work; projectDir=/workspace/projects; volumeClaims=[nextflow-ninon]
+Apr-12 13:28:10.030 [main] DEBUG nextflow.scm.ProviderConfig - Using SCM config path: /home/ninon/.nextflow/scm
+Apr-12 13:28:10.275 [main] DEBUG nextflow.k8s.K8sDriverLauncher - Created K8s configMap with name: nf-config-925ef17a
+Apr-12 13:28:10.347 [main] INFO  nextflow.k8s.K8sDriverLauncher - Launcher pod spec file: .nextflow.pod.yaml
+Apr-12 13:28:30.032 [main] DEBUG nextflow.k8s.K8sDriverLauncher - Wait for pod termination name=boring-poitras
