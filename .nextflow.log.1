@@ -1,23 +1,23 @@
-Apr-13 16:20:26.258 [main] DEBUG nextflow.cli.Launcher - $> nextflow kuberun Nine-s/eager_generated -r master -c nextflow_1.config -resume
-Apr-13 16:20:26.496 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/home/ninon/.nextflow/plugins; core-plugins: nf-amazon@2.1.4,nf-azure@1.3.2,nf-cloudcache@0.3.0,nf-codecommit@0.1.5,nf-console@1.0.6,nf-ga4gh@1.1.0,nf-google@1.8.3,nf-tower@1.6.3,nf-wave@0.14.0
-Apr-13 16:20:26.511 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
-Apr-13 16:20:26.514 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
-Apr-13 16:20:26.518 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
-Apr-13 16:20:26.533 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
-Apr-13 16:20:26.553 [main] DEBUG nextflow.scm.ProviderConfig - Using SCM config path: /home/ninon/.nextflow/scm
-Apr-13 16:20:26.587 [main] DEBUG nextflow.scm.RepositoryFactory - Found Git repository result: [RepositoryFactory]
-Apr-13 16:20:26.597 [main] DEBUG nextflow.scm.RepositoryProvider - Request [credentials -:-] -> https://api.github.com/repos/Nine-s/eager_generated/contents/nextflow.config
-Apr-13 16:20:27.200 [main] DEBUG nextflow.scm.RepositoryProvider - Response status: 404 -- {"message":"Not Found","documentation_url":"https://docs.github.com/rest/repos/contents#get-repository-content"}
-Apr-13 16:20:27.204 [main] DEBUG nextflow.scm.RepositoryProvider - Request [credentials -:-] -> https://api.github.com/repos/Nine-s/eager_generated
-Apr-13 16:20:27.539 [main] DEBUG nextflow.scm.AssetManager - Cannot retrieve remote config file -- likely it does not exist
-Apr-13 16:20:27.558 [main] DEBUG nextflow.config.ConfigBuilder - User config file: /home/ninon/description_prototype/v1/eager_generated/nextflow_1.config
-Apr-13 16:20:27.560 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /home/ninon/description_prototype/v1/eager_generated/nextflow_1.config
-Apr-13 16:20:27.592 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
-Apr-13 16:20:28.740 [main] DEBUG nextflow.k8s.K8sConfig - Kubernetes workDir=/workspace/ninon/work; projectDir=/workspace/projects; volumeClaims=[nextflow-ninon]
-Apr-13 16:20:28.854 [main] DEBUG nextflow.scm.ProviderConfig - Using SCM config path: /home/ninon/.nextflow/scm
-Apr-13 16:20:28.986 [main] DEBUG nextflow.k8s.K8sDriverLauncher - Created K8s configMap with name: nf-config-8210a915
-Apr-13 16:20:29.090 [main] INFO  nextflow.k8s.K8sDriverLauncher - Launcher pod spec file: .nextflow.pod.yaml
-Apr-13 16:21:10.391 [main] ERROR nextflow.cli.Launcher - Premature EOF
+Apr-13 18:24:42.421 [main] DEBUG nextflow.cli.Launcher - $> nextflow kuberun Nine-s/eager_generated -r master -c nextflow_1.config -resume
+Apr-13 18:24:42.689 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/home/ninon/.nextflow/plugins; core-plugins: nf-amazon@2.1.4,nf-azure@1.3.2,nf-cloudcache@0.3.0,nf-codecommit@0.1.5,nf-console@1.0.6,nf-ga4gh@1.1.0,nf-google@1.8.3,nf-tower@1.6.3,nf-wave@0.14.0
+Apr-13 18:24:42.709 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Apr-13 18:24:42.711 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Apr-13 18:24:42.716 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
+Apr-13 18:24:42.731 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Apr-13 18:24:42.759 [main] DEBUG nextflow.scm.ProviderConfig - Using SCM config path: /home/ninon/.nextflow/scm
+Apr-13 18:24:42.792 [main] DEBUG nextflow.scm.RepositoryFactory - Found Git repository result: [RepositoryFactory]
+Apr-13 18:24:42.803 [main] DEBUG nextflow.scm.RepositoryProvider - Request [credentials -:-] -> https://api.github.com/repos/Nine-s/eager_generated/contents/nextflow.config
+Apr-13 18:24:43.409 [main] DEBUG nextflow.scm.RepositoryProvider - Response status: 404 -- {"message":"Not Found","documentation_url":"https://docs.github.com/rest/repos/contents#get-repository-content"}
+Apr-13 18:24:43.414 [main] DEBUG nextflow.scm.RepositoryProvider - Request [credentials -:-] -> https://api.github.com/repos/Nine-s/eager_generated
+Apr-13 18:24:43.748 [main] DEBUG nextflow.scm.AssetManager - Cannot retrieve remote config file -- likely it does not exist
+Apr-13 18:24:43.773 [main] DEBUG nextflow.config.ConfigBuilder - User config file: /home/ninon/description_prototype/v1/eager_generated/nextflow_1.config
+Apr-13 18:24:43.774 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /home/ninon/description_prototype/v1/eager_generated/nextflow_1.config
+Apr-13 18:24:43.812 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
+Apr-13 18:24:44.839 [main] DEBUG nextflow.k8s.K8sConfig - Kubernetes workDir=/workspace/ninon/work; projectDir=/workspace/projects; volumeClaims=[nextflow-ninon]
+Apr-13 18:24:44.971 [main] DEBUG nextflow.scm.ProviderConfig - Using SCM config path: /home/ninon/.nextflow/scm
+Apr-13 18:24:45.085 [main] DEBUG nextflow.k8s.K8sDriverLauncher - Created K8s configMap with name: nf-config-0a3cb29b
+Apr-13 18:24:45.138 [main] INFO  nextflow.k8s.K8sDriverLauncher - Launcher pod spec file: .nextflow.pod.yaml
+Apr-13 18:25:26.068 [main] ERROR nextflow.cli.Launcher - Premature EOF
 java.io.IOException: Premature EOF
 	at java.base/sun.net.www.http.ChunkedInputStream.readAheadBlocking(ChunkedInputStream.java:567)
 	at java.base/sun.net.www.http.ChunkedInputStream.readAhead(ChunkedInputStream.java:611)
