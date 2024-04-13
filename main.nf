@@ -19,7 +19,7 @@ workflow{
         
 FASTQC_PRE_PREPROCESSING(read_pairs_ch)
 FASTP(read_pairs_ch)
-ADAPTER_REMOVAL(FASTP.out.reads, params.clip_adapters_list)
+ADAPTER_REMOVAL(FASTP.out.reads)
 BOWTIE2_INDEX(params.genome)
 FASTQC_POST_PREPROCESSING(ADAPTER_REMOVAL.out.reads)
 BOWTIE2(ADAPTER_REMOVAL.out.reads, params.genome, BOWTIE2_INDEX.out.index)
