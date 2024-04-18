@@ -1,16 +1,16 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: voluminous-booth
+  name: chaotic-hodgkin
   namespace: default
-  labels: {app: nextflow, runName: voluminous-booth}
+  labels: {app: nextflow, runName: chaotic-hodgkin}
 spec:
   restartPolicy: Never
   containers:
-  - name: voluminous-booth
-    image: nextflow/nextflow:23.09.3-edge
+  - name: chaotic-hodgkin
+    image: nextflow/nextflow:24.03.0-edge
     command: [/bin/bash, -c, source /etc/nextflow/init.sh; nextflow run Nine-s/eager_generated
-        -name voluminous-booth -resume last -r master]
+        -name chaotic-hodgkin -resume last -r master]
     env:
     - {name: NXF_WORK, value: /workspace/ninon/work}
     - {name: NXF_ASSETS, value: /workspace/projects}
@@ -25,4 +25,4 @@ spec:
   - name: vol-1
     persistentVolumeClaim: {claimName: nextflow-ninon}
   - name: vol-2
-    configMap: {name: nf-config-6e48b8fe}
+    configMap: {name: nf-config-eaefac65}

@@ -7,6 +7,7 @@ include { ADAPTER_REMOVAL  } from '../../../ninon/description_prototype/modules_
 include { BOWTIE2_INDEX  } from '../../../ninon/description_prototype/modules_eager/bowtie2_index.nf'
 include { BOWTIE2  } from '../../../ninon/description_prototype/modules_eager/bowtie2.nf'
 include { SAMTOOLS_FILTER  } from '../../../ninon/description_prototype/modules_eager/samtools_filter.nf'
+include { SAMTOOLS_SORT  } from '../../../ninon/description_prototype/modules_eager/samtools_sort.nf'
 include { BBDUK  } from '../../../ninon/description_prototype/modules_eager/bbduk.nf'
 include { KRAKEN ; KRAKEN_PARSE ; KRAKEN_MERGE  } from '../../../ninon/description_prototype/modules_eager/kraken.nf'
 
@@ -23,7 +24,8 @@ FASTP(read_pairs_ch)
 BOWTIE2_INDEX(params.genome)
 FASTQC_POST_PREPROCESSING(FASTP.out.reads)
 BOWTIE2(FASTP.out.reads, params.genome, BOWTIE2_INDEX.out.index)
-SAMTOOLS_FILTER(BOWTIE2.out.bam)
+SAMTOOLS_SORT(BOWTIE2.out.sam)
+SAMTOOLS_FILTER(SAMTOOLS_SORT.out.bam)
 BBDUK(SAMTOOLS_FILTER.out.unmapped_fastq)
 KRAKEN(BBDUK.out.fastq)
 KRAKEN_PARSE(KRAKEN.out.kraken_report)
