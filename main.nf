@@ -1,15 +1,15 @@
 nextflow.enable.dsl = 2
 
 
-include { FASTQC as FASTQC_PRE_PREPROCESSING; FASTQC as FASTQC_POST_PREPROCESSING } from '/workdir/ninon/description_prototype/modules_eager/fastqc.nf'
-include { FASTP  } from '/workdir/ninon/description_prototype/modules_eager/fastp_aDNA.nf'
-include { ADAPTER_REMOVAL  } from '/workdir/ninon/description_prototype/modules_eager/adapter_removal.nf'
-include { BOWTIE2_INDEX  } from '/workdir/ninon/description_prototype/modules_eager/bowtie2_index.nf'
-include { BOWTIE2  } from '/workdir/ninon/description_prototype/modules_eager/bowtie2.nf'
-include { SAMTOOLS_FILTER  } from '/workdir/ninon/description_prototype/modules_eager/samtools_filter.nf'
-include { SAMTOOLS_SORT  } from '/workdir/ninon/description_prototype/modules_eager/samtools_sort.nf'
-include { BBDUK  } from '/workdir/ninon/description_prototype/modules_eager/bbduk.nf'
-include { KRAKEN ; KRAKEN_PARSE ; KRAKEN_MERGE  } from ' /workdir/ninon/description_prototype/modules_eager/kraken.nf'
+include { FASTQC as FASTQC_PRE_PREPROCESSING; FASTQC as FASTQC_POST_PREPROCESSING } from '/workdir/ninon/description_prototype/eager_modules/fastqc.nf'
+include { FASTP  } from '/workdir/ninon/description_prototype/eager_modules/fastp_aDNA.nf'
+include { ADAPTER_REMOVAL  } from '/workdir/ninon/description_prototype/eager_modules/adapter_removal.nf'
+include { BOWTIE2_INDEX  } from '/workdir/ninon/description_prototype/eager_modules/bowtie2_index.nf'
+include { BOWTIE2  } from '/workdir/ninon/description_prototype/eager_modules/bowtie2.nf'
+include { SAMTOOLS_FILTER  } from '/workdir/ninon/description_prototype/eager_modules/samtools_filter.nf'
+include { SAMTOOLS_SORT  } from '/workdir/ninon/description_prototype/eager_modules/samtools_sort.nf'
+include { BBDUK  } from '/workdir/ninon/description_prototype/eager_modules/bbduk.nf'
+include { KRAKEN ; KRAKEN_PARSE ; KRAKEN_MERGE  } from '/workdir/ninon/description_prototype/eager_modules/kraken.nf'
 
 workflow{
         read_pairs_ch = Channel
