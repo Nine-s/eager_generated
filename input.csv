@@ -1,7 +1,3 @@
 sample,path_r1,path_r2,condition
 FRT511A-Un,/workdir/ninon/data/data_eager/SRR7774470_1.fastq.gz,/workdir/ninon/data/data_eager/SRR7774470_2.fastq.gz,
 FRT504-Un,/workdir/ninon/data/data_eager/SRR7774471_1.fastq.gz,/workdir/ninon/data/data_eager/SRR7774471_2.fastq.gz,
-PPC529-UnB,/workdir/ninon/data/data_eager/SRR7774472_1.fastq.gz,/workdir/ninon/data/data_eager/SRR7774472_2.fastq.gz,
-PPC529-Pr,/workdir/ninon/data/data_eager/SRR7774473_1.fastq.gz,/workdir/ninon/data/data_eager/SRR7774473_2.fastq.gz,
-TS211F-UnA,/workdir/ninon/data/data_eager/SRR7774474_1.fastq.gz,/workdir/ninon/data/data_eager/SRR7774474_2.fastq.gz,
-PPC529-UnA,/workdir/ninon/data/data_eager/SRR7774475_1.fastq.gz,/workdir/ninon/data/data_eager/SRR7774475_2.fastq.gz,
