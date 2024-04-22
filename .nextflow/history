@@ -1,1 +1,0 @@
-2024-04-08 13:13:51	-	irreverent_carlsson	-	868811b626ccbb7c913e73c41435be30	0d351598-e03a-4039-a554-8b9fa4db2dba	nextflow run main.nf -c nextflow.config -resume
